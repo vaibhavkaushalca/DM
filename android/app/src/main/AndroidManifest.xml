@@ -1,7 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+<meta-data android:name="sk.eyJ1IjoidmFpYmhhdmthdXNoYWwiLCJhIjoiY2x3bzdtNXQ5MThqZjJqbWo4b2V6b3pxMyJ9.guPbwtDuAl9PFHNwffTVFg"
+    android:value="pk.eyJ1IjoidmFpYmhhdmthdXNoYWwiLCJhIjoiY2x3bzZ3YmllMmlqYzJrbnJ2dHR6emVsOSJ9.cnWz59UgMM9KZD7uTD08wQ" />
     <application
       android:name=".MainApplication"
       android:label="@string/app_name"

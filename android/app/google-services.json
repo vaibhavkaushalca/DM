@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "13331977146",
+    "project_id": "drivemetrics-a68ba",
+    "storage_bucket": "drivemetrics-a68ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13331977146:android:da7b07ecebd989fa970383",
+        "android_client_info": {
+          "package_name": "com.myreactnativeapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXV1BcrK37PEgZlSUMaazPd4R4a4Jt3wE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

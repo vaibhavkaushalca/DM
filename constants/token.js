@@ -1,0 +1,2 @@
+export const SECRET_TOKEN =
+  'sk.eyJ1IjoidmFpYmhhdmthdXNoYWwiLCJhIjoiY2x3bzdtNXQ5MThqZjJqbWo4b2V6b3pxMyJ9.guPbwtDuAl9PFHNwffTVFg';

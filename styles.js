@@ -1,0 +1,137 @@
+/* eslint-disable prettier/prettier */
+import {StyleSheet} from 'react-native';
+
+export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  map: {
+    flex: 1,
+  },
+  inputContainer: {
+    position: 'absolute',
+    top: 10,
+    left: 10,
+    right: 10,
+    backgroundColor: 'white',
+    borderRadius: 5,
+    padding: 10,
+    zIndex: 1,
+  },
+  input: {
+    padding: 10,
+    backgroundColor: '#f1f1f1',
+    borderRadius: 5,
+    marginBottom: 10,
+    borderWidth: 1,
+    borderColor: '#ddd',
+  },
+  suggestion: {
+    padding: 10,
+    backgroundColor: 'white',
+    borderRadius: 5,
+    marginVertical: 4,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  suggestionsContainer: {
+    backgroundColor: 'white',
+    borderRadius: 5,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    maxHeight: 200,
+  },
+  buttonContainer: {
+    marginTop: 10,
+  },
+  routeInfo: {
+    position: 'absolute',
+    bottom: 10,
+    left: 10,
+    right: 10,
+    backgroundColor: 'white',
+    borderRadius: 5,
+    paddingBottom: 5,
+    zIndex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  routeText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    paddingBottom: 6,
+  },
+  tagContainer: {
+    position: 'absolute',
+    backgroundColor: 'white',
+    padding: 5,
+    borderRadius: 5,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  tagText: {
+    fontSize: 14,
+    fontWeight: 'bold',
+  },
+  instructionContainer: {
+    marginTop: 10,
+    backgroundColor: 'white',
+    borderRadius: 5,
+    padding: 10,
+  },
+  instructionText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  currentLocationButton: {
+    padding: 10,
+    backgroundColor: '#007bff',
+    borderRadius: 5,
+    marginVertical: 4,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  currentLocationButtonText: {
+    color: 'white',
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
+  backButton: {
+    position: 'absolute',
+    top: 10,
+    left: 10,
+    padding: 10,
+    backgroundColor: '#007bff',
+    borderRadius: 5,
+    zIndex: 2,
+  },
+  backButtonText: {
+    color: 'white',
+    fontWeight: 'bold',
+  },
+});
