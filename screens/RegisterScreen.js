@@ -1,39 +1,59 @@
 // screens/RegisterScreen.js
 import React, { useState, useContext } from 'react';
-import { View, TextInput, Button, StyleSheet } from 'react-native';
-import auth from '@react-native-firebase/auth';
+import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity } from 'react-native';
 import { AuthContext } from '../utils/AuthContext';
+import { auth } from '../utils/firebaseConfig';
 
 const RegisterScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const { setUser } = useContext(AuthContext);
 
-  const handleSignup = async () => {
-    try {
-      const userCredential = await auth().createUserWithEmailAndPassword(email, password);
-      setUser(userCredential.user);
-    } catch (error) {
-      console.error(error);
+  const handleRegister = () => {
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
     }
+
+    auth().createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        setUser(userCredential.user);
+        navigation.replace('Map');
+      })
+      .catch((error) => {
+        console.error(error);
+        alert(error.message);
+      });
   };
 
   return (
     <View style={styles.container}>
+      <Text style={styles.title}>Register</Text>
       <TextInput
         style={styles.input}
         placeholder="Email"
-        onChangeText={setEmail}
         value={email}
+        onChangeText={setEmail}
       />
       <TextInput
         style={styles.input}
         placeholder="Password"
         secureTextEntry
-        onChangeText={setPassword}
         value={password}
+        onChangeText={setPassword}
       />
-      <Button title="Sign Up" onPress={handleSignup} />
+      <TextInput
+        style={styles.input}
+        placeholder="Confirm Password"
+        secureTextEntry
+        value={confirmPassword}
+        onChangeText={setConfirmPassword}
+      />
+      <Button title="Register" onPress={handleRegister} />
+      <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+        <Text style={styles.loginText}>Already have an account? Login</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -42,14 +62,25 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    padding: 16,
+    padding: 20,
+  },
+  title: {
+    fontSize: 24,
+    marginBottom: 20,
+    textAlign: 'center',
   },
   input: {
-    height: 40,
-    borderColor: 'gray',
+    padding: 10,
+    backgroundColor: '#f1f1f1',
+    borderRadius: 5,
+    marginBottom: 10,
     borderWidth: 1,
-    marginBottom: 12,
-    padding: 8,
+    borderColor: '#ddd',
+  },
+  loginText: {
+    marginTop: 20,
+    textAlign: 'center',
+    color: 'blue',
   },
 });
 
